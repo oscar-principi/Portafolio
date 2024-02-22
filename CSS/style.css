@@ -1,0 +1,206 @@
+@import url(./variables.css);
+
+:root{
+    font-size: 1em; 
+    font-family: 'Gruppo', sans-serif;
+}
+/*-----------------------------------------------------------------------------Body--------------------------------------------------------------*/
+
+body{
+    font-size: 1em;
+}
+@media screen and (max-width: 1em) {
+    body {
+        font-size: 0.7em;
+        /* Otros estilos para pantallas pequeñas */
+    }
+
+    /* Agrega estilos específicos para hacer tu navegación más amigable en dispositivos móviles */
+    #navBar {
+        /* Estilos específicos para la barra de navegación en pantallas pequeñas */
+    }
+
+    /* Otros estilos específicos para pantallas pequeñas */
+}
+
+fieldset {
+    border-radius: 10px; 
+    border: 0.1em solid #a1a1a1; 
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------Header-----------------------------------------------------------*/
+/* Estilos para el menú hamburguesa */
+#menuHamburguesa{
+    width: 3em;
+    height: auto;
+    text-align: center;
+}
+#menuIcon {
+    color:white;
+    background:#292929;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 2em;   
+}
+
+#navBar {
+    display: none; /* Oculta el menú inicialmente */
+    position: fixed;/*Evita que se desplacen elementos cuando se abre el 'Menú Hamburguesa'*/
+    z-index: 1000;/*coloca el elemento más arriba en el "eje Z" (profundidad) y lo hace visible sobre otros elementos con valores de z-index más bajos.*/
+}
+#navBar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+@media screen and (max-width: 1em) {
+    #navbar {
+        display: block;
+    }
+
+    #navbar ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;  
+    }
+
+    #navbar li {
+        padding: 15px;
+    }
+}
+/* Fin estilos para el menú hamburguesa */
+
+.headerContainer{
+    padding-bottom: 5vh;
+}
+
+h1 {
+    font-size: 5em; 
+    font-family: 'Merienda', cursive;
+    margin: 0%;
+    margin-left: 3%;    
+}
+
+h2{
+    font-family: 'Merienda', cursive;
+}
+
+.subtitulo{
+    margin-left: 7vh;
+}
+
+.barraNavegacion{
+    list-style-type: none;
+    padding: 0.5em;
+    width: 10em;
+}
+
+nav li a {/* Estilo para los enlaces dentro de los elementos de la lista */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #292929;
+    border-radius: 10px;
+}
+
+#menuIcon:hover {/* Cambio de color al pasar el ratón por encima del icono del 'Menu Hamburguesa' */
+    background-color: #fa0000;
+    border-radius: 10px;
+}
+li a:hover {/* Cambio de color al pasar el ratón por encima de los enlaces del 'Menu Hamburguesa' */
+    background-color: #fa0000;
+    border-radius: 10px;
+}
+
+
+/*----------------------------------------------------------------------------Main---------------------------------------------------------------*/
+legend{
+    font-size: 2em;
+    font-family: 'Merienda', cursive;
+}
+#sobreMi{
+    margin-left: 1vh;
+}
+#sobreMi p{
+    font-size: 1em;
+    text-align: center;  
+    padding:auto; 
+}
+
+.mainContainer section{
+    padding-left: 1em;
+    padding-right: 6em;
+    padding-top: 10em;
+    padding-bottom: 6em;
+}  
+.mainContainer #sobreMi{
+    padding-left: 25em;
+} 
+
+.proyectos a{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 10vh;
+    min-width: 4em;
+    height: 100%;
+    border-radius: 10px;
+    color: white;
+    background-color: #292929;
+}
+
+
+
+/*---------------------------------------------------------------------------Footer-----------------------------------------------------------------*/
+.home{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: .5em;
+    margin-left: 2em;
+    text-decoration: none;
+    background-color: #292929;
+    border-radius: 10px;
+}
+.home:hover {/* Cambio de color al pasar el ratón por encima de los enlaces */
+    background-color: #fa0000;
+    border-radius: 10px;
+}
+footer{
+    text-align: center;
+    margin: auto;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1em;    
+}
+
+
+.imgIconoGitHub{
+    width: 70px; 
+    height: auto;
+    border-radius: 10px;
+}
+.imgIconoGmail{
+    width: 80px; 
+    height: auto;
+    border-radius: 10px;
+}
+.imgIconoWhatsApp{
+    width: 65px; 
+    height: auto;
+    border-radius: 10px;
+}
