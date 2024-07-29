@@ -1,0 +1,327 @@
+/* Importar variables CSS */
+@import url(./variables.css);
+
+/* Estilos globales */
+:root {
+    font-size: 0.9em; /* Tamaño de fuente raíz */
+    font-family: 'Gruppo', sans-serif; /* Fuente predeterminada */
+}
+
+body {
+    font-size: 0.9em; /* Tamaño de fuente para el cuerpo */  
+    background-color: #c4c4c4;  
+}
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    opacity: .90;
+}
+fieldset{
+    border-color:  rgb(143, 143, 143);
+}
+
+
+@media screen and (max-width: 1em) {
+    body {
+        font-size: 0.8em; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+    }
+}
+
+/* Transiciones */
+nav li a,
+.home {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para enlaces de navegación y botones 'home' */
+}
+
+#menuIcon {
+    transition: background-color 0.3s ease; /* Transición suave para el icono del menú */
+}
+
+footer a {
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para los enlaces del pie de página */
+}
+
+.imgIconoGitHub:hover,
+.imgIconoGmail:hover,
+.imgIconoWhatsApp:hover,
+.imgIconoLinkedin:hover {
+    transition: opacity 0.3s ease; /* Transición suave para los iconos en el pie de página */
+}
+
+.proyectos .home a:hover {
+    background-color: #fa0000; /* Cambio de color en el hover de los enlaces en la sección de proyectos */
+    transition: opacity 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilos para el menú hamburguesa */
+#menuHamburguesa {
+    width: 3em; /* Ancho del contenedor del menú hamburguesa */
+    height: auto; /* Alto automático para el contenedor del menú hamburguesa */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+#menuIcon {
+    color: white; /* Color del texto del icono */
+    background: #292929; /* Color de fondo del icono */
+    border-radius: 10px; /* Bordes redondeados del icono */
+    display: block; /* Muestra el icono como un bloque */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el icono */
+    font-size: 2em; /* Tamaño de fuente del icono */
+}
+
+#navBar {
+    display: none; /* Oculta el menú inicialmente */
+    position: fixed; /* Fija el menú en la parte superior de la pantalla */
+    z-index: 10; /* Asegura que el menú esté sobre otros elementos */
+}
+
+#navBar.fixed {
+    position: fixed; /* Fija el menú en la parte superior cuando se activa */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho completo de la pantalla */
+    z-index: 10; /* Asegura que el menú esté sobre otros elementos */
+}
+
+@media screen and (max-width: 1em) {
+    #navBar {
+        display: block; /* Muestra el menú para pantallas pequeñas */
+    }
+
+    #navBar ul {
+        list-style-type: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el padding */
+        text-align: center; /* Centra el texto en la lista */
+    }
+
+    #navBar li {
+        padding: 10px; /* Espaciado interno de los elementos de la lista */
+    }
+}
+
+/* Estilos para el encabezado */
+.headerContainer {
+    padding-bottom: 20vh; /* Espacio en la parte inferior del contenedor del encabezado */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto y la imagen */
+    gap: 20px; /* Espacio entre el texto y la imagen */
+    margin-left: 2vh;
+}
+
+.header-content h1 {
+    margin: 0; /* Elimina el margen por defecto del <h1> */
+}
+
+.cv-download img {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-left: 15px; /* Espacio entre el texto y la imagen */
+}
+
+
+.image-container {
+    position: relative; /* Necesario para posicionar la imagen de sobreposición */
+    display: inline-block; /* Ajusta el contenedor para que tenga el tamaño adecuado */
+}
+
+.cv-download {
+    width: 100%; /* Ajusta el ancho según el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.image-overlay {
+    position: absolute; /* Posiciona la imagen de sobreposición sobre la imagen principal */
+    top: 0; /* Alinea la imagen de sobreposición al borde superior */
+    left: 0; /* Alinea la imagen de sobreposición al borde izquierdo */
+    width: 100%; /* Ajusta el ancho según el contenedor */
+    height: 100%; /* Ajusta la altura según el contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    opacity: 0; /* Oculta la imagen de sobreposición inicialmente */
+    transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad */
+}
+
+.image-container:hover .image-overlay {
+    opacity: 0.3; /* Muestra la imagen de sobreposición con opacidad al pasar el mouse */
+}
+
+
+.red-line {
+    border: 0; /* Elimina el borde por defecto */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: rgb(143, 143, 143); /* Color de la línea */
+    margin: 20px 0; /* Espacio arriba y abajo de la línea */
+}
+
+
+
+h1 {
+    font-size: 4em; /* Tamaño de fuente del título principal */
+    font-family: 'Merienda', cursive; /* Fuente del título principal */
+}
+
+h2 {
+    font-family: 'Merienda', cursive; /* Fuente para los subtítulos */
+}
+
+
+
+.barraNavegacion {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0.5em; /* Espaciado interno de los elementos de la lista */
+    width: 10em; /* Ancho de los elementos de la lista */
+}
+
+nav li a {
+    display: block; /* Muestra los enlaces como bloques */
+    color: white; /* Color del texto de los enlaces */
+    text-align: center; /* Centra el texto en los enlaces */
+    padding: 14px 16px; /* Espaciado interno de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    background-color: #292929; /* Color de fondo de los enlaces */
+    border-radius: 10px; /* Bordes redondeados de los enlaces */
+}
+
+#menuIcon:hover {
+    background-color: #fa0000; /* Cambia el color de fondo en el hover del icono del menú */
+    border-radius: 10px; /* Mantiene los bordes redondeados en el hover */
+}
+
+li a:hover {
+    background-color: #fa0000; /* Cambia el color de fondo en el hover de los enlaces del menú */
+    border-radius: 10px; /* Mantiene los bordes redondeados en el hover */
+}
+
+/* Ajustes para la sección 'About me' */
+#sobreMi {
+    max-width: 500px;
+    font-size: 0.9em; /* Tamaño de fuente de la sección */
+    padding-left: 18em;
+    padding-top: 0em; /* Espaciado interno en la parte superior */
+}
+
+#sobreMi p {
+    font-size: 1em; /* Tamaño de fuente para el texto dentro de 'About me' */
+    text-align: center; /* Centra el texto dentro de la sección */
+}
+
+.cv-download {
+    text-decoration: none;
+    color: #007BFF; /* color del enlace */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+.cv-download i {
+    margin-right: 8px;
+}
+
+.cv-download img {
+    width: 200px;
+    height: 200px;
+    margin-right: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cv-download:hover {
+    text-decoration: underline;
+}
+/* Estilos para el main */
+legend {
+    font-size: 2em; /* Tamaño de fuente para los elementos 'legend' */
+    font-family: 'Merienda', cursive; /* Fuente para los elementos 'legend' */
+}
+
+.mainContainer section {
+    padding-top: 10em; /* Espaciado interno en la parte superior */
+    padding-bottom: 10em; /* Espaciado interno en la parte inferior */
+}
+
+.proyectos a {
+    display: inline-block; /* Muestra los enlaces como bloques en línea */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    text-align: center; /* Centra el texto en los enlaces */
+    width: 10vh; /* Ancho de los enlaces */
+    min-width: 4em; /* Ancho mínimo de los enlaces */
+    height: 100%; /* Alto completo de los enlaces */
+    border-radius: 10px; /* Bordes redondeados de los enlaces */
+    color: white; /* Color del texto de los enlaces */
+    background-color: #292929; /* Color de fondo de los enlaces */
+}
+
+
+/* Estilos para el footer */
+.home {
+    display: inline-block; /* Muestra los enlaces como bloques en línea */
+    color: white; /* Color del texto de los enlaces */
+    text-align: center; /* Centra el texto en los enlaces */
+    padding: 0.5em; /* Espaciado interno de los enlaces */
+    margin-left: 2em; /* Margen izquierdo de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    background-color: #292929; /* Color de fondo de los enlaces */
+    border-radius: 10px; /* Bordes redondeados de los enlaces */
+}
+
+.home:hover {
+    background-color: #fa0000; /* Cambia el color de fondo en el hover de los enlaces */
+    border-radius: 10px; /* Mantiene los bordes redondeados en el hover */
+}
+
+footer {
+    text-align: center; /* Centra el texto en el pie de página */
+    margin: auto; /* Centra el pie de página */
+}
+
+footer a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 1.5em; /* Tamaño de fuente para los enlaces del pie de página */
+    padding: 1em; /* Espaciado interno de los enlaces del pie de página */
+}
+
+/* Iconos del footer */
+#iconosContact a:hover img {
+    transition: all 300ms;
+    transform: scale(1.50);
+}
+.imgIconoGitHub {
+    width: 40px; /* Ancho del icono de GitHub */
+    height: auto; /* Mantiene la proporción del icono */
+    border-radius: 10px; /* Bordes redondeados del icono */
+}
+
+.imgIconoGmail {
+    width: 45px; /* Ancho del icono de Gmail */
+    height: auto; /* Mantiene la proporción del icono */
+    border-radius: 10px; /* Bordes redondeados del icono */
+}
+
+.imgIconoWhatsApp {
+    width: 40px; /* Ancho del icono de WhatsApp */
+    height: auto; /* Mantiene la proporción del icono */
+    border-radius: 10px; /* Bordes redondeados del icono */
+}
+
+.imgIconoLinkedin {
+    width: 40px; /* Ancho del icono de LinkedIn */
+    height: auto; /* Mantiene la proporción del icono */
+    border-radius: 10px; /* Bordes redondeados del icono */
+}
+
