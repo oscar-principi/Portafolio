@@ -40,7 +40,62 @@ fieldset{
     }
 }
 
-/* Transiciones */
+/* Estilos para la sección de cambio de idioma */
+.idioma {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.idioma .en, .idioma .es {
+    color: #808080;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.idioma .check {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+}
+
+.idioma .check:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.idioma .check:after {
+    content: '';
+    position: absolute;
+    width: 23px; /* Ajuste para el borde */
+    height: 23px; /* Ajuste para el borde */
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    left: 0;
+    top: 1px; /* Asegura que esté centrado verticalmente */
+}
+
+.idioma .check:checked:after {
+    background: #fa0000;
+    left: 25px; /* Mueve el círculo al extremo derecho cuando está chequeado */
+}
+
+
+/* Transiciones de desplazamiento */
 nav li a,
 .home {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para enlaces de navegación y botones 'home' */
