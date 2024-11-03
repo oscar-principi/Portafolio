@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
   
   
   // -----------------------------------------------------------------------------------------------------Carrusel efecto infinito y movimiento automatico
-  const carousel = document.querySelector('.carousel-images');
+    const carousel = document.querySelector('.carousel-images');
     const items = Array.from(document.querySelectorAll('.carousel-item'));
     let currentIndex = 0;
     let itemWidth = items[0].offsetWidth;
@@ -17,18 +17,24 @@ window.addEventListener('scroll', () => {
     carousel.append(items[0].cloneNode(true));
 
     function updateCarousel() {
-        carousel.style.transition = 'transform 0.3s ease-in-out';
+        carousel.style.transition = 'transform 1s ease-in-out';
         carousel.style.transform = `translateX(-${(currentIndex + 1) * itemWidth}px)`;
     }
 
     function moveCarousel(direction) {
         currentIndex += direction;
-
-        // Transición de desplazamiento infinito
-        carousel.style.transition = 'transform 0.5s ease-in-out';
+    
+        // Asegúrate de que el índice esté dentro del rango permitido
+        if (currentIndex < -1) {
+            currentIndex = items.length - 1;
+        } else if (currentIndex > items.length) {
+            currentIndex = 0;
+        }
+    
+        // Actualiza el transform con la transición
+        carousel.style.transition = 'transform 1s ease-in-out';
         carousel.style.transform = `translateX(-${(currentIndex + 1) * itemWidth}px)`;
-
-        // Ajuste de índice para el efecto infinito
+    
         carousel.addEventListener('transitionend', () => {
             if (currentIndex === -1) {
                 carousel.style.transition = 'none';
@@ -41,6 +47,8 @@ window.addEventListener('scroll', () => {
             }
         });
     }
+    
+    
 
     // Ajustar el ancho de cada slide al redimensionar la ventana
     window.addEventListener('resize', () => {
@@ -51,7 +59,7 @@ window.addEventListener('scroll', () => {
     // Configurar el movimiento automático del carrusel
     setInterval(() => {
         moveCarousel(1); // Mueve hacia la siguiente imagen
-    }, 5000); // Cambia la imagen cada 5 segundos (5000 ms)
+    }, 15000); // Cambia la imagen cada 10 segundos 
 
     // Posicionar el carrusel en el primer elemento real
     updateCarousel();

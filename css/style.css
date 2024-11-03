@@ -136,21 +136,11 @@ section#bienvenida{
     display: inline-block; 
 }
 
-@keyframes rotateImage {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .foto-perfil {
     width: 250px; 
     height: 250px; 
     border-radius: 50%; 
     display: block; 
-    animation: rotateImage 1.5s ease-in-out; /* Ajusta la duración según prefieras */
 }
 
 
