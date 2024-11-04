@@ -1,4 +1,4 @@
-  // Efecto de fondo y color de letras en la cabecera al hacer scroll
+  // ---------------------------------------------------------------------------------------Efecto de fondo y color de letras en la cabecera al hacer scroll
   window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     header.classList.toggle('scrolled', window.scrollY > 50);
