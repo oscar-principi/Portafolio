@@ -183,7 +183,7 @@ section#sobre-mi {
 
 .carousel {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 800px;
     margin: auto;
     overflow: hidden;
@@ -198,7 +198,6 @@ section#sobre-mi {
     min-width: 100%; 
     text-align: center;
     color: #fff; 
-    transform: scale(0.8); /* Reduce ligeramente el tamaño de los elementos laterales */
     transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
