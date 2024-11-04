@@ -222,7 +222,8 @@ section#sobre-mi {
 
 /*--------------------------------------------------------------------------------------------------------------------------Seccion: Contacto*/
 #contacto {
-    padding: 10px 0;
+    padding-top: 0.2em;
+    padding-bottom: 1.5em;
     text-align: center;
     background-color: #f4f4f4;
 }
@@ -230,7 +231,7 @@ section#sobre-mi {
 .contact-icons {
     display: flex;
     justify-content: center;
-    gap: 30px; 
+    gap: 50px; 
 }
 
 .contact-icons a {
@@ -242,10 +243,14 @@ section#sobre-mi {
     width: 50px;
     height: 50px;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    /* Agrega la sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajusta los valores según lo desees */
 }
 
 .contact-icons a:hover img {
     transform: scale(1.2); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
 /* ---------------------------------Contacto: Iconos */
@@ -257,3 +262,12 @@ section#sobre-mi {
     height: auto; 
     border-radius: 10px; 
 }
+
+/*----------------------------------------------------------------------------------Footer*/
+
+footer {
+    text-align: center; /* Centra el texto dentro del footer */
+    position: relative; /* Asegura que el footer esté en su posición natural */
+    padding-top: 60px;
+}
+
