@@ -134,13 +134,13 @@ section {
 #bienvenida, 
 #sobre-mi {
     flex: 1;                 
-    min-width: 100px;      
+    min-width: 300px;      
     margin: 10px;            
 }
 
 @media (max-width: 768px) {
     #bienvenida {
-        margin-top: 150px; /* Aumenta el margen en pantallas pequeñas */
+        margin-top: 300px; /* Aumenta el margen en pantallas pequeñas */
     }
     .inicio-contenedor {
         flex-direction: column;
