@@ -140,7 +140,7 @@ section {
 
 @media (max-width: 768px) {
     #bienvenida {
-        margin-top: 300px; /* Aumenta el margen en pantallas pequeñas */
+        margin-top: 170px; /* Aumenta el margen en pantallas pequeñas */
     }
     .inicio-contenedor {
         flex-direction: column;
