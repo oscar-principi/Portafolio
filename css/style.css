@@ -52,10 +52,13 @@ header nav ul li a {
     transition: color 0.3s; 
 }
 header nav ul li a:hover {
-    color: #ec3c1d; /* Cambia este color al que prefieras para el hover */
+    color: #ec3c1d; 
 }
 #btn_inicio{
     color: #ec3c1d;
+}
+#header.scrolled nav ul li a:hover {
+    color: #ec3c1d; 
 }
 
 #header.scrolled #btn_inicio{
@@ -194,8 +197,7 @@ section#sobre-mi {
 .carousel-item {
     min-width: 100%; 
     text-align: center;
-    color: #fff;
-
+    color: #fff; 
 }
 
 .carousel-item img {
