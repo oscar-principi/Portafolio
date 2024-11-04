@@ -22,6 +22,9 @@ window.addEventListener('scroll', () => {
     }
 
     function moveCarousel(direction) {
+        // Primero, elimina la clase 'active' de la imagen actual
+        items[currentIndex].classList.remove('active');
+    
         currentIndex += direction;
     
         // Asegúrate de que el índice esté dentro del rango permitido
@@ -35,6 +38,11 @@ window.addEventListener('scroll', () => {
         carousel.style.transition = 'transform 1s ease-in-out';
         carousel.style.transform = `translateX(-${(currentIndex + 1) * itemWidth}px)`;
     
+        // Agrega la clase 'active' a la nueva imagen
+        if (currentIndex >= 0 && currentIndex < items.length) {
+            items[currentIndex].classList.add('active');
+        }
+    
         carousel.addEventListener('transitionend', () => {
             if (currentIndex === -1) {
                 carousel.style.transition = 'none';
@@ -45,8 +53,11 @@ window.addEventListener('scroll', () => {
                 currentIndex = 0;
                 carousel.style.transform = `translateX(-${(currentIndex + 1) * itemWidth}px)`;
             }
+    
+            // Asegúrate de que la clase 'active' esté en el nuevo índice
+            items[currentIndex].classList.add('active');
         });
-    }
+    }   
     
     
 

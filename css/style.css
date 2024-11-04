@@ -51,6 +51,9 @@ header nav ul li a {
     font-weight: bold;
     transition: color 0.3s; 
 }
+header nav ul li a:hover {
+    color: #ec3c1d; /* Cambia este color al que prefieras para el hover */
+}
   
 #header.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
@@ -185,6 +188,7 @@ section#sobre-mi {
     min-width: 100%; 
     text-align: center;
     color: #fff;
+
 }
 
 .carousel-item img {
@@ -197,6 +201,7 @@ section#sobre-mi {
     margin-top: 10px;
     font-size: 1.1em;
 }
+
 
 /* ----------------------Proyectos: Botones de navegación */
 .carousel-btn {
