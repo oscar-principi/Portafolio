@@ -1,10 +1,12 @@
   // Efecto de fondo y color de letras en la cabecera al hacer scroll
-window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     header.classList.toggle('scrolled', window.scrollY > 50);
   });
   
-  
+  //------------------------------------------------------------------------------------------------Menu hamburguesa
+
+
   
   // -----------------------------------------------------------------------------------------------------Carrusel efecto infinito y movimiento automatico
   const carousel = document.querySelector('.carousel-images');

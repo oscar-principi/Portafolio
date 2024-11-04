@@ -76,6 +76,10 @@ header nav ul li a:hover {
 #header.scrolled .header-name {
     color: #fff; 
 }
+/*------------------------------Menu hamburguesa*/
+
+
+
 
 /*--------------------------------------------------------------------------------------------Seccion: Inicio*/
 #inicio {
@@ -285,4 +289,3 @@ footer {
     text-align: center; /* Centra el texto dentro del footer */
     position: relative; /* Asegura que el footer esté en su posición natural */
 }
-
