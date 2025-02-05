@@ -1,0 +1,29 @@
+/* Sección: Cabecera */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name {
+    font-size: 1.5em;
+    color: #994e10;
+}
+
+@media (max-width: 768px) {
+    .header-name {
+        font-size: 1.5em;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+}

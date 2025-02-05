@@ -1,0 +1,45 @@
+
+/* Sección: Contacto */
+#contacto {
+    padding: 5% 0;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-icons a {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-icons a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-icons a:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 768px) {
+    .contact-icons {
+        gap: 10px;
+    }
+
+    .contact-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+}

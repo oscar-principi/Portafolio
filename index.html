@@ -5,98 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Oscar</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-    <body>
-      <!-- Cabecera -->
-      <header id="header">
-          <!-- <button class="menu-toggle" aria-expanded="false">☰</button> -->
-          <div class="header-name"><span id="typed-text"></span></div>
-           <nav>
-            <ul>
-                <li><a id="btn_inicio" href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="./pdf/CV Oscar Principi IT.pdf">CV</a></li>
-            </ul>
-          </nav>
-      </header>
-    
-      <!-- Contenido -->
-      <main>
-          <!-- Inicio -->
-          <section id="inicio">
-              <div class="inicio-contenedor">
-                  <section id="bienvenida">
-                      <h1>Bienvenid@ a mi portafolio</h1>
-                      <div class="image-container">
-                          <img src="./img/FotoPerfil.JPG" alt="Foto de Perfil" class="foto-perfil">
-                        </div>
-                </section>
-                
+    <link rel="stylesheet" href="css/body.css">
 
-                <!-- Sobre Mí -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sobremi.css">
+    <link rel="stylesheet" href="css/indicador.css">
+    <link rel="stylesheet" href="css/proyectos.css">
+    <link rel="stylesheet" href="css/contactos.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <div class="header-name"><span id="typed-text"></span></div>
+        <nav>
+            <ul>
+                <!-- <li><a id="btn_inicio" href="#inicio">Inicio</a></li> -->
+                <!-- <li><a href="#proyectos-grid">Proyectos</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <!-- Inicio -->
+        <section id="inicio">
+            <div class="inicio-contenedor">
                 <section id="sobre-mi">
-                    <h3>Sobre Mí</h3>
-                    <p>Hola, me llamo Oscar, soy estudiante de Programación y Sistemas en la UTN FRGP, orientado al desarrollo de aplicaciones web Full Stack. 
-                        Estoy comprometido con el desarrollo de soluciones que generen un impacto positivo en la sociedad. </p>
+                    <h2 class="titulo-bienvenida">¡Te doy la bienvenida a mi portafolio!</h2>
+                    <p>Soy estudiante de Programación en la UTN FRGP, apasionado por el desarrollo de software y especializado en el backend. 
+                    <!-- Trabajo con tecnologías como C#, .NET, Entity Framework, APIs y SQL, aunque también tengo experiencia en HTML, CSS, Bootstrap y Blazor para el desarrollo frontend. -->
+                    A lo largo de mi formación, he desarrollado proyectos personales y académicos, buscando siempre mejorar mis habilidades y aprender nuevas herramientas. 
+                    Mi motivación principal es crear soluciones tecnológicas que generen un impacto positivo en la sociedad.
+                    </p>
                 </section>
-            </div>
+            </div>           
         </section>
-    
-    
+        
+        <!-- Scroll Indicator -->
+        <div id="scroll-indicator">
+            <span id="scroll-text">Proyectos</span>
+            <div class="arrow"></div>
+        </div>
+
+        
         <!-- Proyectos -->
         <section id="proyectos">
-            <h2>Proyectos</h2>
-            <div class="carousel">
-              <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
-              <div class="carousel-images">
-                <div class="carousel-item">
-                    <h3>Sistema de Gestion de Clinica Médica.</h3>
-                    <img src="./img/Proyectos/Clinica Medica.png" alt="Sistema de Gestion de Clinica Médica">
-                    <p>Con mi equipo de trabajo de la Universidad, en la materia Programación III, desarrollamos un "Sistema de Gestion Médica" con .NET Framework y SQL, donde usamos una arquitectura en 3 capas. Realiza un registro de entre los dos tipos de usuario, y el administrador gestiona un ABML sobre la base de datos. </p>
-                </div>
-                <div class="carousel-item">
-                  <h3>Muebles Finochio</h3>
-                  <img src="./img/Proyectos/Muebles Finochio.png" alt="Portafolio">
-                  <p>Desarrolle una pagina web para una carpinteria, con tecnologia HTML, CSS/Boostrap.</p>
-                </div>
-                <div class="carousel-item">
-                  <h3>Sistema de Gestion de Clinica Veterinaria.</h3>
-                  <img src="./img/Proyectos/Clinica Veterinaria.png" alt="Sistema de Gestion de Clinica Veterinaria.">
-                  <p> Con mi equipo de trabajo de la Universidad, en la materia Laboratorio II, desarrollamos un "Sistema de Gestion Veterinaria" de consola en C++, que realiza un ABML de distintos usuarios con manejo de archivos, algoritmos y estructuras de datos, punteros y memoria dinamica, sobrecarga de operadores, y para la interfaz se uso la libreria rlutil.h</p>
-                </div>
-                <div class="carousel-item">
-                    <h3>Portafolio personal</h3>
+            <div id="proyectos-grid" class="proyectos-grid">
+                <!-- <div class="proyecto">
+                    <h2 class="titulo-proyecto">Express eCommerce</h2>
                     <img src="./img/Proyectos/Portafolio.png" alt="Portafolio">
-                    <p>Desarrolle mi portafolio personal, con tecnologia HTML, CSS y javascript.</p>
+                    <p>Desarrollado con .NET Core, SQL, Blazor, Boostrap</p>
+                </div> -->
+                <div class="proyecto">
+                    <h2 class="titulo-proyecto">Sistema de Gestión Médica</h2>
+                    <img src="./img/Proyectos/Clinica Medica.png" alt="Sistema de Gestión de Clínica Médica">
+                    <p>Desarrollado con .NET Framework, SQL, CSS.</p>
                 </div>
-                <!-- Agrega más proyectos aquí -->
-              </div>
-              <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+                <div class="proyecto">
+                    <h2 class="titulo-proyecto">Muebles Finochio</h2>
+                    <img src="./img/Proyectos/Muebles Finochio.png" alt="Muebles Finochio">
+                    <p>Desarrollado con HTML, CSS/Bootstrap.</p>
+                </div>
+                <div class="proyecto">
+                    <h2 class="titulo-proyecto">Sistema de Gestión Veterinaria</h2>
+                    <img src="./img/Proyectos/Clinica Veterinaria.png" alt="Sistema de Gestión de Clínica Veterinaria">
+                    <p>Desarrollado en consola con C++ y Rlutil.</p>
+                </div>
+                <div class="proyecto">
+                    <h2 class="titulo-proyecto">Portafolio personal</h2>
+                    <img src="./img/Proyectos/Portafolio.png" alt="Portafolio">
+                    <p>Desarrollado con HTML, CSS y JavaScript.</p>
+                </div>
             </div>
-          </section>
-          
-    
+        </section>
+        
         <!-- Contacto -->
         <section id="contacto">
-            <h2>Contacto</h2>
             <div class="contact-icons">
-              <a href="https://www.linkedin.com/in/oscar-principi" target="_blank">
-                <img src="./img/linkedin.jpg" alt="LinkedIn" class="imgIconoLinkedin">
-              </a>
-              <a href="https://api.whatsapp.com/send?phone=2213043135" target="_blank">
-                <img src="./img/whatsapp.png" alt="WhatsApp" class="imgIconoWhatsApp">
-              </a>
-              <a href="https://github.com/oscar-principi" target="_blank">
-                <img src="./img/github.jpg" alt="GitHub" class="imgIconoGitHub">
-              </a>
+                <a href="https://www.linkedin.com/in/oscar-principi" target="_blank" class="icono-link">
+                    <img src="./img/Iconos-Contacto/linkedin.jpg" alt="LinkedIn" class="imgIcono">
+                </a>
+                <a href="https://github.com/oscar-principi" target="_blank" class="icono-link">
+                    <img src="./img/Iconos-Contacto/github.jpg" alt="GitHub" class="imgIcono">
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=2213043135" target="_blank" class="icono-link">
+                    <img src="./img/Iconos-Contacto/whatsapp.png" alt="WhatsApp" class="imgIcono">
+                </a>
+                <a href="https://www.instagram.com/oscar.principi" target="_blank" class="icono-link">
+                    <img src="./img/Iconos-Contacto/instagram.png" alt="Instagram" class="imgIcono">
+                </a>
             </div>
-          </section>
-        </main>
-        <footer>  
-          <a>Copyright © 2024 by Oscar Príncipi | All Rights Reserved</a>
-        </footer>
-      <script src="js/funciones.js"></script>
-    </body>
-    </html>
+        </section>
+    </main>
     
+    
+    <!--Footer-->
+    <footer>
+        <!-- Scroll Indicator - Volver al inicio -->
+        <div id="scroll-to-top">
+            <div class="arrow"></div>
+            <span>Inicio</span>
+        </div>
+        <div class="footer">
+            © 2025 Oscar | Todos los derechos reservados
+        </div>
+    </footer>
+    
+    <!--Script-->
+    <script src="js/header.js"></script>
+    <script src="js/sobremi.js"></script>
+    <script src="js/indicador.js"></script>
+    <script src="js/proyectos.js"></script>
+
+</body>
+</html>
