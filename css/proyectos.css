@@ -36,6 +36,12 @@
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
 }
+.proyecto img[alt="Tetris"] {
+    width: 80%; 
+    max-width: 200px;
+    height: auto; 
+}
+
 
 .titulo-proyecto {
     color: #994e10;
